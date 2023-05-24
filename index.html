@@ -36,9 +36,9 @@
             <li class="nav__item">
               <a href="#work" class="nav__link">Work</a>
             </li>
-            <li class="nav__item">
+            <!-- <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -129,9 +129,19 @@
           <div>
             <h2 class="skills__subtitle">Profesional Skills</h2>
             <p class="skills__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
-              optio id vero amet, alias architecto consectetur error eum eaque
-              sit.
+              I possess a diverse range of professional skills: With expertise
+              in ReactJS, JavaScript, HTML, and CSS, I excel in web development.
+              I specialize in creating interactive and responsive user
+              interfaces. I have hands-on experience integrating Firebase for
+              seamless user authentication and data management. My
+              problem-solving abilities, combined with an analytical mindset,
+              allow me to tackle complex challenges effectively. I am skilled in
+              collaborating with cross-functional teams and possess excellent
+              communication skills. I am committed to continuous learning,
+              staying up to date with the latest trends and technologies in web
+              development. In summary, my skills encompass web development
+              proficiency, Firebase integration, problem-solving capabilities,
+              collaboration, and a drive for ongoing learning.
             </p>
             <div class="skills__data">
               <div class="skills__names">
@@ -198,45 +208,64 @@
         <h2 class="section-title">Work</h2>
 
         <div class="work__container bd-grid">
-          <!-- <a
-            href="https://Calculator-app.tosinbadmus.repl.co"
-            class="work__img"
-          >
+          <a href="https://savvy-shopper.netlify.app/" class="work__img">
+            <img src="./assets/img/savvy.png" alt="" />
           </a>
-          <a href="" class="work__img"> </a>
-          <a href="https://maxngReplica.tosinbadmus.repl.co" class="work__img">
-          </a>
-          <a
-            href="https://altschoolexam-69743.web.app/counter"
-            class="work__img"
-          >
-          </a> -->
         </div>
+
+        <span
+          ><p>
+            Introducing Savvy Shopper, an online shopping site I developed using
+            ReactJS, vanilla CSS, Redux, and Firebase for user authentication.
+            With a focus on seamless navigation and a visually appealing design,
+            I created a dynamic and responsive user interface using React
+            components. By integrating Firebase, I ensured secure user
+            authentication and profile management. The site's aesthetics were
+            crafted using vanilla CSS, promoting a visually engaging shopping
+            experience. Through the implementation of Redux, I optimized
+            performance and facilitated efficient data flow. Savvy Shopper
+            offers a personalized, secure, and enjoyable online shopping
+            experience.
+          </p></span
+        >
       </section>
 
       <!--===== CONTACT =====-->
-      <section class="contact section" id="contact">
+      <!-- <section class="contact section" id="contactForm">
         <h2 class="section-title">Contact</h2>
 
         <div class="contact__container bd-grid">
           <form action="" class="contact__form">
-            <input type="text" placeholder="Name" class="contact__input" />
-            <input type="mail" placeholder="Email" class="contact__input" />
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              class="contact__input"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              class="contact__input"
+              required
+            />
             <textarea
               name=""
-              id=""
+              id="message"
               cols="0"
               rows="10"
               class="contact__input"
+              required
             ></textarea>
             <input
-              type="button"
+              type="submit"
               value="Submit"
               class="contact__button button"
             />
           </form>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!--===== FOOTER =====-->
@@ -260,5 +289,40 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+    <script>
+      document
+        .getElementById("contact__form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get form element
+          const form = document.getElementById("contact__form");
+
+          // Get form values
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const message = document.getElementById("message").value;
+
+          // Perform validation
+          if (
+            name.trim() === "" ||
+            email.trim() === "" ||
+            message.trim() === ""
+          ) {
+            alert("Please fill in all fields");
+            return;
+          }
+
+          // Create the message body
+          const messageBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+
+          // Here, you can implement your logic to send the message using AJAX or any other method you prefer
+          // For demonstration purposes, we'll simply log the message to the console
+          console.log(messageBody);
+
+          // Reset the form
+          form.reset();
+        });
+    </script>
   </body>
 </html>

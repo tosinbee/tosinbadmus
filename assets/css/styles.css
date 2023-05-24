@@ -341,12 +341,19 @@ img {
 /* ===== WORK =====*/
 .work__container {
   row-gap: 2rem;
+
 }
 
+.work span p{
+  width: 500px;
+  margin-left: 200px;
+  margin-top: 40px;
+}
 .work__img {
   box-shadow: 0px 0px 5px rgba(14, 36, 49, 0.15);
   border-radius: .5rem;
- padding: .5rem;
+ padding: 0.4rem;
+ width: 500px;
 }
 
 .work__img img {
