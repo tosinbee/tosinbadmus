@@ -527,11 +527,38 @@ img {
     width: 100%;
     margin-left: 0;
     margin-top: 20px;
+    
+  }
+
+  .work p{
+    text-align: center;
+    padding: 20px;
+    line-height: 28px;
   }
 
   .work__img {
     width: 100%;
     max-width: 500px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .work span p {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+    
+  }
+
+  .work p{
+    padding: 20px;
+    line-height: 28px;
+  }
+
+  .work__img {
+    width: 100%;
+    max-width: 400px;
   }
 }
 
